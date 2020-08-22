@@ -45,14 +45,13 @@
 
 		<script defer>
 			document.addEventListener('DOMContentLoaded', function (event) {
-				// https://stackoverflow.com/a/37717220/4847186
 				let age = Math.floor((new Date() - new Date('April 27, 1999')) / 1000 / 60 / 60 / 24 / 365.25);
 				document.getElementById('age').innerHTML = age;
 			});
 		</script>
 	</head>
 	<body>
-		<div id="parent" class="light">
+		<div id="parent" class="dark">
 			<header class="header">
 				<div class="name__container">
 					<div class="profile-image">
@@ -62,7 +61,7 @@
 						/>
 					</div>
 					<div class="profile-details">
-						<h1 class="name" id="header"><strong>Adetunji Oluwaferanmi</strong></h1>
+						<h1 class="name" id="header">Adetunji Oluwaferanmi</h1>
 						<h2>Software Engineer</h2>
 						<ul class="social">
 							<li>
@@ -119,7 +118,7 @@
 							</li>
 							<li>
 								<a
-									href="/files/David Akanni Resume.pdf"
+									href="images/Adetunji oluwaferanmi.pdf"
 									title="Resume"
 									target="_blank"
 									rel="noopener"
@@ -192,20 +191,26 @@
 							</div>
 						</div>
 
-						<div class="education section">
-							<h2 id="education">Education</h2>
+						<div class="languages section">
+							<h2 id="languages">Languages</h2>
 							<div class="content">
-								<div class="education__item">
-									<p><i class="fa fa-graduation-cap"></i> B Tech. Computer Engineering</p>
+								<div class="row langauge_item">
 									<p>
-										<i class="fa fa-map-marker" aria-hidden="true"></i
-										><span class="sr-only">Location:</span>Federal university of Technology, Akure, Ondo State
-										<span>(2015-2021)</span>
+										English &nbsp; &nbsp; &nbsp; &nbsp;<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+									</p>
+								</div>
+								<div class="row langauge_item">
+									<p>
+										Yoruba &nbsp; &nbsp; &nbsp; &nbsp;<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
 									</p>
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="experience section">
 							<h2>Work Experience</h2>
 							<div class="work content">
