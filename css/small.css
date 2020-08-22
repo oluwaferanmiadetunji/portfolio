@@ -7,7 +7,7 @@ h2 {
 	text-align: center;
 }
 .header {
-	height: 70vh;
+	height: 50vh;
 	background: black;
 	color: white;
 	position: absolute;
@@ -20,8 +20,8 @@ h2 {
 	margin: 25px;
 }
 .profile-image {
-  text-align: center;
-  margin-left: 0;
+	text-align: center;
+	margin-left: 0;
 }
 .profile-details {
 	margin: 25px 0;
@@ -40,6 +40,6 @@ h2 {
 	font-size: 15px;
 }
 main {
-  margin-top: 70vh;
-  overflow-x: hidden;
+	margin-top: 50vh;
+	overflow-x: hidden;
 }
