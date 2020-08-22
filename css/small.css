@@ -43,3 +43,10 @@ main {
 	margin-top: 50vh;
 	overflow-x: hidden;
 }
+.works {
+	margin-bottom: 40px;
+}
+.works img {
+	width: 70%;
+	height: 20%;
+}
