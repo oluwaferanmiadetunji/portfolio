@@ -1,0 +1,45 @@
+h1 {
+	font-size: 30px;
+	text-align: center;
+}
+h2 {
+	font-size: 20px;
+	text-align: center;
+}
+.header {
+	height: 70vh;
+	background: black;
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.name__container {
+	display: block;
+	margin: 25px;
+}
+.profile-image {
+  text-align: center;
+  margin-left: 0;
+}
+.profile-details {
+	margin: 25px 0;
+}
+.social {
+	text-align: center;
+	margin: 20px 75px;
+	padding-inline-start: 0;
+}
+.social li {
+	margin: auto;
+}
+.icons {
+	height: 15px;
+	width: 15px;
+	font-size: 15px;
+}
+main {
+  margin-top: 70vh;
+  overflow-x: hidden;
+}

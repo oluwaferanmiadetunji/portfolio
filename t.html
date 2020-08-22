@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>David Akanni | Frontend Engineer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta
+			name="description"
+			content="David Akanni is a prolific frontend engineer with over four years experience in software development and building awesome user interfaces & experiences, working with bleeding edge technologies to solve problems. I speak Angular and React,Nextjs right now."
+		/>
+		<meta name="keywords" content="frontend%20developer frontend%20engineer react angular css html web%20developer" />
+		<meta name="googlebot" content="index, follow" />
+		<meta name="robots" content="index, follow" />
+		<meta
+			name="og:title"
+			property="og:title"
+			content="Seun Akanni is a prolific frontend engineer with over four years experience in software development and building awesome user interfaces & experiences, working with bleeding edge technologies to solve problems. I speak Angular and React,Nextjs right now."
+		/>
+		<meta property="og:url" content="https://seunakanni.me/" />
+		<meta property="og:site_name" content="SeunAkanni" />
+		<meta name="theme-color" content="#ffffff" />
+		<!-- <meta property="og:image" content="https://res.cloudinary.com/dgv2ytq4r/image/upload/v1582031882/seun_ons3vd.jpg"/>
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="600" /> -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:description"
+			content="David Akanni is a prolific frontend engineer with over four years experience in software development and building awesome user interfaces & experiences, working with bleeding edge technologies to solve problems. I speak Angular and React,Nextjs right now."
+		/>
+		<meta name="twitter:title" content="David Akanni | Frontend Engineer" />
+		<meta name="twitter:site" content="@i_am_mylo" />
+		<meta name="twitter:image" content="https://res.cloudinary.com/dgv2ytq4r/image/upload/v1582031882/seun_ons3vd.jpg" />
+		<meta name="twitter:domain" content="SeunAkanni" />
+		<meta name="twitter:creator" content="@i_am_mylo" />
+		<meta name="twitter:url" content="https://seunakanni.me/" />
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+		<link rel="manifest" href="images/favicon/site.webmanifest" />
+		<link
+			rel="stylesheet"
+			media="all"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			media="all"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" media="all" href="css/styles.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2" media="all" />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75522934-4" defer></script>
+		<script defer>
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			(window.dataLayer = window.dataLayer || []), gtag('js', new Date()), gtag('config', 'UA-75522934-4');
+		</script>
+		<script defer>
+			document.addEventListener('DOMContentLoaded', function (event) {
+				let isLightMode = true;
+				let parent = document.getElementById('parent');
+
+				//set default theme to night node
+				const hour = new Date().getHours(); //get hours of the day in 24Hr format (0-23)
+				if (hour >= 18) {
+					isLightMode = false;
+					parent.className = 'dark-mode';
+				} else {
+					isLightMode = true;
+					parent.className = 'light-mode';
+				}
+
+				const bulb = document.getElementById('bulb');
+				bulb.addEventListener('click', function () {
+					if (isLightMode) {
+						isLightMode = false;
+						parent.className = 'dark-mode';
+					} else {
+						isLightMode = true;
+						parent.className = 'light-mode';
+					}
+				});
+
+				window.addEventListener('devicelight', function (event) {
+					console.log(event.value);
+				});
+
+				let allImages = document.querySelectorAll('img');
+				let imagesLoaded = 0;
+				// Count the total number of images on the page when the page has loaded.
+				let totalImages = Object.keys(allImages).length;
+
+				// After an image is loaded, add to the count, and if that count equals the
+				// total number of images, then add the class 'mask' to all h2.
+
+				Object.entries(allImages).map(([node, img]) => {
+					img.addEventListener('load', (event) => {
+						imagesLoaded++;
+						if (imagesLoaded == totalImages) {
+							document.getElementById('header').classList.add('mask');
+							let allHeader = document.querySelectorAll('h2');
+							Object.entries(allHeader).map(([node, header]) => {
+								header.classList.add('mask');
+							});
+						}
+					});
+				});
+
+				// https://stackoverflow.com/a/37717220/4847186
+				let age = Math.floor((new Date() - new Date('April 14, 1996')) / 1000 / 60 / 60 / 24 / 365.25);
+				document.getElementById('age').innerHTML = age;
+			});
+		</script>
+	</head>
+	<body>
+		<div id="parent" class="light-mode">
+			<header class="header clearfix">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-3 d-flex justify-content-center">
+							<img
+								class="profile-image img-responsive"
+								src="https://res.cloudinary.com/dgv2ytq4r/image/upload/v1582031882/seun_ons3vd.jpg"
+								alt="Akanni David's image"
+							/>
+						</div>
+						<div
+							class="col-sm-12 col-md-8 mr-md-auto d-flex flex-column align-items-center align-items-md-start align-items-sm-center profile_name"
+						>
+							<h1 class="name" id="header"><strong>David Akanni</strong></h1>
+							<h2>Frontend Engineer</h2>
+							<ul class="social list-inline">
+								<li>
+									<a
+										href="https://twitter.com/i_am_mylo"
+										title="Twitter"
+										target="_blank"
+										rel="noopener"
+										aria-label="Twitter"
+										><i class="fa fa-twitter"></i
+									></a>
+								</li>
+								<li>
+									<a
+										href="https://www.linkedin.com/in/akanniseun"
+										title="Linkedin"
+										target="_blank"
+										rel="noopener"
+										aria-label="linkedIn"
+										><i class="fa fa-linkedin"></i
+									></a>
+								</li>
+								<li>
+									<a
+										href="https://github.com/MyloCarson"
+										target="_blank"
+										title="GitHub"
+										rel="noopener"
+										aria-label="Github"
+										><i class="fa fa-github-alt"></i
+									></a>
+								</li>
+								<li>
+									<a
+										href="https://medium.com/@akannidavidseun"
+										title="Medium"
+										target="_blank"
+										rel="noopener"
+										aria-label="Medium"
+										><i class="fa fa-medium"></i
+									></a>
+								</li>
+								<li>
+									<a
+										href="https://articles.seunakanni.me"
+										title="Blog"
+										target="_blank"
+										rel="noopener"
+										aria-label="My Blog"
+										><i class="fa fa-newspaper-o"></i
+									></a>
+								</li>
+								<li>
+									<a
+										href="https://www.instagram.com/i_am_mylo"
+										title="Instagram"
+										target="_blank"
+										rel="noopener"
+										aria-label="Instagram"
+										><i class="fa fa-instagram"></i
+									></a>
+								</li>
+								<li>
+									<a
+										href="/files/David Akanni Resume.pdf"
+										title="Resume"
+										target="_blank"
+										rel="noopener"
+										aria-label="Resume"
+										><i class="fa fa-file"></i
+									></a>
+								</li>
+								<!-- <li style="opacity: 0;">  <a href="https://www.twine.fm/iammylo"></a></li> -->
+							</ul>
+							<div class="align-middle btn-wrapper">
+								<button class="btn btn-secondary">
+									<a href="mailto:akannidavidseun@gmail.com?Subject=Mail%20to%20say%20hi."
+										>Let's grab coffee.<i class="fa fa-paper-plane"></i
+									></a>
+								</button>
+							</div>
+							<i id="bulb" class="fa fa-lightbulb-o" aria-hidden="true"></i>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 mx-auto d-none d-md-block contribution-graph">
+						<img
+							class="col-md-12 mx-auto"
+							src="https://ghchart.rshah.org/MyloCarson"
+							alt="MyloCarson's Github chart"
+						/>
+					</div>
+					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+						<div class="about section">
+							<h2 id="introduction">Introduction</h2>
+							<div class="content">
+								<p>
+									Hi there 👋🏽, I am David, a <span id="age"></span> years old frontend engineer. I have over
+									four years experience in software development and building awesome user interfaces &
+									experiences, working with bleeding edge technologies to solve problems. I speak Angular and
+									React right now.<br /><br />David Akanni is a highly productive frontend developer. I have a
+									liking for learning and implementing new technologies with a flair for creating elegant
+									solutions in the least amount of time.
+								</p>
+							</div>
+						</div>
+						<div class="experience section">
+							<h2>Work Experience</h2>
+							<div class="content">
+								<h3><i class="fa fa-briefcase" aria-hidden="true"></i> Lead Frontend Engineer</h3>
+								<h4><i class="fa fa-building-o" aria-hidden="true"></i> Redsofa</h4>
+								<h4 class="location">
+									<i class="fa fa-map-marker" aria-hidden="true"></i
+									><span class="sr-only">Location:</span>Remote, Amsterdam
+								</h4>
+								<p class="time"><i class="fa fa-calendar"></i> March 2018 - present</p>
+								<ul>
+									<li>Research software engineering choices and tools</li>
+									<li>Management of progress on KPIs and tasks using Trello</li>
+									<li>Maintain all software systems from development to production</li>
+									<li>Implementing real time applications using Socket.io</li>
+									<li>
+										Creating reusable layouts, partials and flexible HTML templates using HandleBars.js and
+										SCSS for prototyping thus reduce development time.
+									</li>
+									<li>Automate CSS and assets generation, assembling HandleBars templates using Grunt.</li>
+									<li>Structure and build independent components using BEM methodology.</li>
+									<li>Deploy all web applications to Heroku and Netlify for test purposes.</li>
+									<li>
+										Implementing modular, reusable components that are easy to maintain across React and
+										Angular projects.
+									</li>
+									<li>Agile Development including daily stand-ups.</li>
+									<li>Converting user interfaces from Figma</li>
+									<li>
+										Brainstorming and idea generation using
+										<a href="https://retroly.io" target="_blank" rel="noopener" aria-label="Retroly"
+											>Retroly.io</a
+										>
+									</li>
+									<li>
+										Created a retrospective web application called
+										<a href="https://retroly.io" target="_blank" rel="noopener" aria-label="Retroly"
+											>Retroly</a
+										>
+										and performed the role of a sole full-stack developer utilizing using MEAN stack.
+									</li>
+									<li>
+										Collaborated as a sole front end developer in a fast-paced team to develop an e-commerce
+										web application called
+										<a
+											href="https://http://yanamode.herokuapp.com"
+											target="_blank"
+											rel="noopener"
+											aria-label="Yanamode"
+											>Yanamode</a
+										>
+										for fabrics using Angular. I developed both the user-facing frontend application and the
+										merchant-facing frontend application.
+									</li>
+									<li>
+										Actively using
+										<a
+											href="https://gitlab.com/akannidavidseun"
+											target="_blank"
+											rel="noopener"
+											aria-label="Gitlab"
+											>GitLab</a
+										>
+										for all projects.
+									</li>
+								</ul>
+							</div>
+							<div class="content">
+								<h3><i class="fa fa-briefcase" aria-hidden="true"></i> Software Developer</h3>
+								<h4><i class="fa fa-building-o" aria-hidden="true"></i> mobileXcetera Limited</h4>
+								<h4 class="location">
+									<i class="fa fa-map-marker" aria-hidden="true"></i
+									><span class="sr-only">Location:</span>Lagos, Nigeria
+								</h4>
+								<p class="time"><i class="fa fa-calendar"></i> September 2018 - January 2019</p>
+								<ul>
+									<li>Coordinated team and software engineering choices</li>
+									<li>Breakdown of tasks and web application design expectations</li>
+									<li>API design, general software work flow and reports back to managers</li>
+									<li>Built newsletters and email templates for campaigns</li>
+									<li>Built front end web application using Angular.</li>
+									<li>Built application programming interfaces using Slim 3 PHP.</li>
+									<li>
+										Developed a web portal for content management using Angular 6, thus increasing the amount
+										of news uploaded per day, saving up to 80% cost and also increasing productivity for
+										content managers
+									</li>
+									<li>
+										Developed web crawlers using RegExp with PHP to fetch movie information for Ntertane a
+										music and video streaming platform, from "https://www.nowshowing.com.ng" with 0% latency.
+									</li>
+									<li>
+										Migrated of some web services from Windows Servers to Linux Servers and implemented load
+										balancing using HAProxy, thus increasing the reliability of the services.
+									</li>
+									<li>Maintained systems on Windows and Linux Servers</li>
+									<li>Worked with Linux Servers via Digital Ocean.</li>
+									<li>Deployed multiple docker images, ran multiple docker instances</li>
+									<li>
+										Developed code fixes and enhancements for inclusion in future code releases and patches.
+									</li>
+								</ul>
+							</div>
+							<div class="content">
+								<h3><i class="fa fa-briefcase" aria-hidden="true"></i> Software Developer(Intern)</h3>
+								<h4><i class="fa fa-building-o" aria-hidden="true"></i> mobileXcetera Limited</h4>
+								<h4 class="location">
+									<i class="fa fa-map-marker" aria-hidden="true"></i
+									><span class="sr-only">Location:</span>Lagos, Nigeria
+								</h4>
+								<p class="time"><i class="fa fa-calendar"></i> September 2016 - April 2017</p>
+								<ul>
+									<li>Mobile Development (Android)</li>
+									<li>
+										Developed and integrated a commenting system into a hybrid application using AngularJs,
+										PHP
+									</li>
+									<li>
+										Developed a pharmaceutical android application that helps with drug administration and
+										usage
+									</li>
+									<li>Worked with a team to develop an event planning android application</li>
+									<li>Developed a CRUD platform for value added services</li>
+								</ul>
+							</div>
+						</div>
+						<div class="latest section">
+							<h2>Latest Project</h2>
+							<div class="content row">
+								<!-- <img class="works_image img-responsive col-md-5 col-sm-12 " src="https://res.cloudinary.com/dgv2ytq4r/image/upload/v1582031863/retroly-1_kbohxk.png"
+                          height="50%" width="50%" alt="retroly" /> -->
+								<div class="col-sm-12 col-md-12">
+									<iframe
+										style="border: none;"
+										src="https://cards.producthunt.com/cards/posts/178874?v=1"
+										width="100%"
+										height="405"
+										frameborder="0"
+										scrolling="no"
+										allowfullscreen
+									></iframe
+									><!-- <h3>Retroly</h3> -->
+									<p>
+										<svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path
+												d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1,1,0,0,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1A10,10,0,0,0,15.71,12.71ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z"
+											/>
+										</svg>
+										- Fullstack Developer
+									</p>
+									<p>
+										Retroly is a tool for teams that want to flourish and have impactful retros every single
+										time. Organize retrospectives with team members all around the globe and collect feedback
+										on different issues and ideas. Retroly allows you to collect honest feedback by allowing
+										your team to anonymously post their views. Retroly guides your team through
+										industry-approved activities that ensure you run a successful retro every time. From easy
+										card sorting and customization options to live time storage, the user-friendly interface
+										gives you the opportunity to improve your team’s performance and share ideas across a
+										common platform.
+									</p>
+									<p>
+										Technologies: Angular 8, Node.js, Express.js, MongoDB, Socket.io, HTML5, SCSS, Netlify,
+										GitLab
+									</p>
+									<h3>Roles</h3>
+									<ul>
+										<li>Built different microservices for frontend and backend.</li>
+										<li>Implemented token based authentication system with refresh tokens</li>
+										<li>Implemented real time feedbacks using Node.js and Socket.io</li>
+										<li>Automated documentation generation using postman collections for all endpoints</li>
+										<li>Converted all designs from Figma using Angular and SCSS</li>
+										<li>Auto-generate PDF and Excel documents using PDFMake and Workbook.js</li>
+										<li>Implemented image storage using Cloudinary</li>
+										<li>Continuously managing all deployments for both frontend and backend applications</li>
+										<li>Integrated payment and billing management using Stripe</li>
+										<li>I built the APIs using Nodejs,Express, Socket.io and MongoDB.</li>
+									</ul>
+									<h3>Accomplishments</h3>
+									<ul>
+										<li>Retroly won 2nd product of the day on Product Hunt on 26th of December 2019</li>
+										<li>Currently with over 4000+ successful retrospectives.</li>
+										<li>Over 200+ daily usage</li>
+										<li>Increasing active user engagements in France and the United States.</li>
+										<li>
+											Retroly was featured on a top tech blog in France.
+											<a
+												target="_blank"
+												rel="noopener"
+												aria-label="Retroly Featured on a tech blog"
+												href="https://www.blogdumoderateur.com/retroly-outil-retrospective-scrum/"
+												>View</a
+											>
+										</li>
+									</ul>
+									<p>
+										<a
+											href="https://retroly.io"
+											title="Retroly"
+											target="_blank"
+											rel="noopener"
+											aria-label="Retroly"
+											><i class="fa fa-external-link"></i> Check Out</a
+										>
+									</p>
+									<p>
+										<a
+											href="https://www.behance.net/gallery/95989429/Retroly"
+											target="_blank"
+											rel="noopener"
+											aria-label="Retroly"
+											><i class="fa fa-external-link"></i> Retroly's Mood Board</a
+										>
+									</p>
+								</div>
+							</div>
+							<div class="content row">
+								<div class="col-sm-12 col-md-12">
+									<div class="works_image-wrapper">
+										<img
+											class="works_image"
+											src="https://res.cloudinary.com/dgv2ytq4r/image/upload/v1594338790/wejapa_yb9k7i.png"
+											alt="wejapa"
+										/>
+									</div>
+									<h3>WeJapa</h3>
+									<p>
+										<svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path
+												d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1,1,0,0,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1A10,10,0,0,0,15.71,12.71ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z"
+											/>
+										</svg>
+										- Frontend Developer
+									</p>
+									<p>Converted all deigns from Figma using React, SCSS and CSS Modules</p>
+									<p>Used functional components only</p>
+									<p>All SVG icons and illustrations are functional components. This allows for reusability</p>
+									<p>Chose Nextjs because of it's awesome file system routing</p>
+									<p>Technologies: Nextjs, SCSS, CSS Modules, GitHub, Netlify</p>
+									<p>
+										<a
+											href="http://wejapa.com/"
+											title="WeJapa"
+											target="_blank"
+											rel="noopener"
+											aria-label="WeJapa"
+											><i class="fa fa-external-link"></i> Check Out</a
+										>
+									</p>
+								</div>
+							</div>
+							<div class="content row">
+								<div class="col-sm-12 col-md-12">
+									<div class="works_image-wrapper">
+										<img
+											class="works_image img-responsive"
+											src="https://res.cloudinary.com/dgv2ytq4r/image/upload/v1594306265/homescreen_ibjjj3.png"
+											alt="Pegasus"
+										/>
+									</div>
+									<h3>Pegasus</h3>
+									<p>
+										<svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path
+												d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1,1,0,0,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1A10,10,0,0,0,15.71,12.71ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z"
+											/>
+										</svg>
+										- Frontend Developer
+									</p>
+									<p>Pagasus - Borderless payments platform.</p>
+									<p>Converted all designs from Figma using HTML5 and SCSS</p>
+									<p>Technologies: HTML5, SCSS, Tailwind</p>
+									<p>
+										<a
+											href="#"
+											target="_blank"
+											title="Pegasus Landingpage"
+											rel="noopener"
+											aria-label="Pegasus"
+											><i class="fa fa-external-link"></i>Available on Request</a
+										>
+									</p>
+								</div>
+							</div>
+							<div class="content row">
+								<div class="col-md-5 col-sm-12">
+									<div class="works_image-wrapper">
+										<img
+											class="works_image img-responsive"
+											src="https://res.cloudinary.com/dgv2ytq4r/image/upload/v1594338772/biyified_z5kmju.png"
+											alt="Biyified"
+										/>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-7">
+									<h3>Biyi Adetunji's Portfolio</h3>
+									<p>
+										<svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path
+												d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1,1,0,0,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1A10,10,0,0,0,15.71,12.71ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z"
+											/>
+										</svg>
+										- Frontend Developer
+									</p>
+									<p>Converted all designs from Figma using HTML5 and SCSS</p>
+									<p>
+										Used
+										<a
+											href="https://greensock.com/gsap/"
+											target="_blank"
+											rel="noopener"
+											aria-label="Greensock"
+											>Greensock</a
+										>
+										for some aminations
+									</p>
+									<p>Technologies: HTML5, SCSS, Gitlab</p>
+									<p>
+										<a
+											href="http://biyified.nl/"
+											target="_blank"
+											title="Biyified's Portfolio"
+											rel="noopener"
+											aria-label="Biyified"
+											><i class="fa fa-external-link"></i> Check Out</a
+										>
+									</p>
+								</div>
+							</div>
+							<div class="content row">
+								<div class="col-md-5 col-sm-12">
+									<div class="works_image-wrapper">
+										<img
+											class="works_image img-responsive"
+											src="https://res.cloudinary.com/dgv2ytq4r/image/upload/q_auto:low/v1582031898/teslon_mtzmfz.png"
+											alt="teslon"
+										/>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-7">
+									<h3>Teslon</h3>
+									<p>
+										<svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path
+												d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1,1,0,0,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1A10,10,0,0,0,15.71,12.71ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z"
+											/>
+										</svg>
+										- Frontend Developer
+									</p>
+									<p>Converted all deigns from Figma using HTML5 and SCSS and Bootstrap 4 for griding</p>
+									<p>Used CSS transition, transform and animation for animation effects</p>
+									<p>Technologies: HTML5, SCSS, Bootstrap 4, GitHub</p>
+									<p>
+										<a
+											href="https://teslon.netlify.com/"
+											title="Teslon"
+											target="_blank"
+											rel="noopener"
+											aria-label="Teslon"
+											><i class="fa fa-external-link"></i> Check Out</a
+										>
+									</p>
+								</div>
+							</div>
+							<div class="content row">
+								<div class="col-md-5 col-sm-12">
+									<div class="works_image-wrapper">
+										<img
+											class="works_image img-responsive"
+											src="https://res.cloudinary.com/dgv2ytq4r/image/upload/q_auto:low/v1582031851/ore_s-portfolio-cropped_txuksb.png"
+											alt="ore adetunji's portfolio"
+										/>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-7">
+									<h3>Ore Adetunji's Portfolio</h3>
+									<p>
+										<svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path
+												d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1,1,0,0,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1A10,10,0,0,0,15.71,12.71ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z"
+											/>
+										</svg>
+										- Frontend Developer
+									</p>
+									<p>Converted all designs from Figma using HTML5 and SCSS</p>
+									<p>Used CSS transitions for mild animation effect</p>
+									<p>Technologies: HTML5, SCSS, Bootstrap 4, GitHub</p>
+									<p>
+										<a
+											href="https://oreadetunji.com"
+											title="Ore's Portfolio"
+											target="_blank"
+											rel="noopener"
+											aria-label="Ore Adetunji"
+											><i class="fa fa-external-link"></i> Check Out</a
+										>
+									</p>
+								</div>
+							</div>
+							<div class="content row">
+								<div class="col-md-5 col-sm-12">
+									<div class="works_image-wrapper">
+										<img
+											class="works_image img-responsive"
+											src="https://res.cloudinary.com/dgv2ytq4r/image/upload/q_auto:low/v1582031752/music_right-cropped_k6oukl.png"
+											alt="music & rights"
+										/>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-7">
+									<h3>Music & Rights</h3>
+									<p>
+										<svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path
+												d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1,1,0,0,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1A10,10,0,0,0,15.71,12.71ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z"
+											/>
+										</svg>
+										- Frontend Developer
+									</p>
+									<p>A Startup interested in the statistics and metrics part of music and entertainment.</p>
+									<p>
+										With 0yrs of experience in React, I translated Marvel App designs and built the whole
+										frontend application using React and SCSS.
+									</p>
+									<p>Handled all forms elements with Formik</p>
+									<p>Sad 😔, it didn't go to production due to certain issues with 3rd parties</p>
+									<p>Technologies: React, React Hooks, React Router, Bootstrap 4, GitHub</p>
+									<p>
+										<a
+											href="https://hopeful-aryabhata-448c83.netlify.com"
+											title="Music & Right"
+											target="_blank"
+											rel="noopener"
+											aria-label="Music&Right"
+											><i class="fa fa-external-link"></i> Still in Development Phase</a
+										>
+									</p>
+								</div>
+							</div>
+							<div class="content row">
+								<div class="col-md-5 col-sm-12">
+									<div class="works_image-wrapper">
+										<img
+											class="works_image img-responsive"
+											src="https://res.cloudinary.com/dgv2ytq4r/image/upload/q_auto:low/v1582031749/yanamode_l9dyjz.jpg"
+											alt="yanamode"
+										/>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-7">
+									<h3>Yanamode User</h3>
+									<p>
+										<svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path
+												d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1,1,0,0,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1A10,10,0,0,0,15.71,12.71ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z"
+											/>
+										</svg>
+										- Frontend Developer
+									</p>
+									<p>
+										Fashion Tech Startup that helps users find and purchase clothing materials online. Users
+										can search with images, colors among other search parameters.
+									</p>
+									<p>
+										The fun part of the project was plugging into an AI-powered backend that searches for
+										images and clothe patterns
+									</p>
+									<p>Converted all designs from Figma using Angular and SCSS</p>
+									<p>Translated designs with components and reusability in mind</p>
+									<p>All SVGs and illustrations are pure Angular components, this helps reusability</p>
+									<p>Transitions and animations were achieved with pure CSS3 Transitions and Animation</p>
+									<p>Collaborated with remote team spread across Nigeria and Europe</p>
+									<p>Handled forms with Angular Reactive Form Modules</p>
+									<p>Sadly 😔, the project was put on hold.</p>
+									<p>Technologies: Angular, Bootstrap 4, Express.js, Node.js, GitLab</p>
+									<p>
+										<a
+											href="http://yanamode.herokuapp.com"
+											title="Yanamode"
+											target="_blank"
+											rel="noopener"
+											aria-label="Yanamode"
+											><i class="fa fa-external-link"></i> Still in Development Phase</a
+										>
+									</p>
+								</div>
+							</div>
+							<div class="content row">
+								<div class="col-md-5 col-sm-12">
+									<div class="works_image-wrapper">
+										<img
+											class="works_image img-responsive"
+											src="https://res.cloudinary.com/dgv2ytq4r/image/upload/q_auto:low/v1582031745/yana-merchant_ze8f8l.png"
+											alt="yanamode merchant"
+										/>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-7">
+									<h3>Yanamode Merchant</h3>
+									<p>
+										<svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+											<path
+												d="M15.71,12.71a6,6,0,1,0-7.42,0,10,10,0,0,0-6.22,8.18,1,1,0,0,0,2,.22,8,8,0,0,1,15.9,0,1,1,0,0,0,1,.89h.11a1,1,0,0,0,.88-1.1A10,10,0,0,0,15.71,12.71ZM12,12a4,4,0,1,1,4-4A4,4,0,0,1,12,12Z"
+											/>
+										</svg>
+										- Frontend Developer
+									</p>
+									<p>Fashion Tech Startup that helps users with clothing materials</p>
+									<p>Converted all designs from Figma using Angular and SCSS</p>
+									<p>Sad 😔, the project was put on hold.</p>
+									<p>Technologies: Angular, Bootstrap 4, Express.js, Node.js,GitLab</p>
+									<p>
+										<a href="#" aria-label="Yanamode"
+											><i class="fa fa-external-link"></i> Available on Request</a
+										>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+						<aside class="clearfix">
+							<h2 class="sr-only">Basic Information</h2>
+							<div class="row">
+								<ul class="col list-unstyled">
+									<li class="col">
+										<i class="fa fa-map-marker"></i><span class="sr-only">Location:</span> Lagos, Nigeria.
+									</li>
+									<li class="col">
+										<i class="fa fa-newspaper-o"></i><span class="sr-only">Articles:</span
+										><a href="https://articles.seunakanni.me" aria-label="email"
+											>https://articles.seunakanni.me</a
+										>
+									</li>
+									<li class="col">
+										<i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span
+										><a
+											href="mailto:akannidavidseun@gmail.com?Subject=Mail%20to%20enquire."
+											aria-label="email"
+											>akannidavidseun@gmail.com</a
+										>
+									</li>
+								</ul>
+							</div>
+							<div class="col">
+								<ul class="row list-unstyled">
+									<li class="col">
+										<i class="fa fa-link"></i><span class="sr-only">GitHub:</span
+										><a
+											href="https://github.com/MyloCarson"
+											target="_blank"
+											rel="noopener"
+											aria-label="GitHub"
+											>GitHub</a
+										>
+									</li>
+									<li class="col">
+										<i class="fa fa-link"></i><span class="sr-only">Gitlab:</span
+										><a
+											href="https://gitlab.com/akannidavidseun"
+											target="_blank"
+											rel="noopener"
+											aria-label="Gitlab"
+											>GitLab</a
+										>
+									</li>
+									<li class="col">
+										<i class="fa fa-linkedin"></i><span class="sr-only">Linkedln:</span
+										><a
+											href="https://www.linkedin.com/in/akanniseun"
+											target="_blank"
+											rel="noopener"
+											aria-label="LinkedIn"
+											>Linkedln</a
+										>
+									</li>
+									<li class="col">
+										<i class="fa fa-twitter"></i><span class="sr-only">Twitter:</span
+										><a
+											href="https://twitter.com/i_am_mylo"
+											target="_blank"
+											rel="noopener"
+											aria-label="Twitter"
+											>Twitter</a
+										>
+									</li>
+								</ul>
+							</div>
+						</aside>
+						<aside>
+							<h2 class="sr-only">Skills</h2>
+							<h2>Skills</h2>
+							<div class="skill-content">
+								<div>
+									<p>HTML5 &amp; CSS3</p>
+									<!-- <span class="level">Intermediate</span> -->
+								</div>
+							</div>
+							<div class="skill-content">
+								<div>
+									<p>CSS Preprocessing</p>
+									<!-- <span class="level">Beginner</span> -->
+								</div>
+							</div>
+							<div class="skill-content">
+								<div>
+									<p>JavaScript (ES6 Hands-on)</p>
+									<!-- <span class="level">Intermediate</span> -->
+								</div>
+							</div>
+							<div class="skill-content">
+								<div>
+									<p>Angular, React and Nextjs</p>
+									<!-- <span class="level">Intermediate</span> -->
+								</div>
+							</div>
+						</aside>
+						<aside>
+							<h2 class="sr-only">Soft Skills</h2>
+							<h2>Soft Skills</h2>
+							<div class="skill-content">
+								<div><p>Agile Methodology</p></div>
+							</div>
+							<div class="skill-content">
+								<div><p>Collaboration</p></div>
+							</div>
+							<div class="skill-content">
+								<div><p>Remote work</p></div>
+							</div>
+							<div class="skill-content">
+								<div><p>Work Ethics</p></div>
+							</div>
+							<div class="skill-content">
+								<div><p>Problem Solving</p></div>
+							</div>
+							<div class="skill-content">
+								<div><p>Debugging</p></div>
+							</div>
+							<div class="skill-content">
+								<div><p>Adaptability</p></div>
+							</div>
+							<div class="skill-content">
+								<div><p>Enthusiasm</p></div>
+							</div>
+							<div class="skill-content">
+								<div><p>Communication</p></div>
+							</div>
+						</aside>
+						<aside>
+							<h2>Education</h2>
+							<div class="education_item">
+								<p><i class="fa fa-graduation-cap"></i> HND Computer Science</p>
+								<p class="university">Yaba College of Technology, Yaba, Lagos <span>(2016-2018)</span></p>
+							</div>
+							<div class="education_item">
+								<p><i class="fa fa-graduation-cap"></i> OND Computer Science</p>
+								<p class="university">Yaba College of Technology, Yaba, Lagos <span>(2013-2015)</span></p>
+							</div>
+						</aside>
+						<aside>
+							<h2>Human Languages</h2>
+							<div class="row langauge_item">
+								<p class="col-md-5 col-sm-12">English <span class="mx-md-2">Native Speaker</span></p>
+								<div class="col-md-5 col-sm-12 mx-md-n4 rating-star">
+									<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+								</div>
+							</div>
+							<div class="row langauge_item">
+								<p class="col-md-5 col-sm-12">Yoruba <span class="mx-md-2">Native Speaker</span></p>
+								<div class="col-md-5 col-sm-12 mx-md-n4 rating-star">
+									<span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span> <span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+						</aside>
+						<aside>
+							<h2>Certifications</h2>
+							<div>
+								<p>Andela Android Development Beginner Certified.</p>
+								<p>
+									<a
+										href="https://drive.google.com/open?id=1fvCJqTbE50CW5P-OuJWRXMzhMZaM3mRw"
+										target="_blank"
+										rel="noopener"
+										><i
+											class="fa fa-external-link"
+											target="_blank"
+											rel="noopener"
+											aria-label="Certificate"
+										></i>
+										Check Out</a
+									>
+								</p>
+								<p></p>
+								<p>Andela Android Development Intermediate Certified.</p>
+								<p>
+									<a
+										href="https://drive.google.com/open?id=1ZGHXAWjYRb-Z4JPI4uQo2YEWIBGxTlB5"
+										target="_blank"
+										rel="noopener"
+										><i
+											class="fa fa-external-link"
+											target="_blank"
+											rel="noopener"
+											aria-label="Certificate"
+										></i>
+										Check Out</a
+									>
+								</p>
+								<p></p>
+								<p>FreeCodeCamp Responsive Web Design.</p>
+								<p>
+									<a
+										href="https://www.freecodecamp.org/certification/i_am_mylo/responsive-web-design"
+										target="_blank"
+										rel="noopener"
+										><i
+											class="fa fa-external-link"
+											target="_blank"
+											rel="noopener"
+											aria-label="Certificate"
+										></i>
+										Check Out</a
+									>
+								</p>
+								<p></p>
+							</div>
+						</aside>
+						<aside>
+							<h2>Links</h2>
+							<div>
+								<p></p>
+								<p>
+									Built in Africa features
+									<a href="https://retroly.io" target="_blank" rel="noopener">Retroly.io</a>.
+								</p>
+								<p>
+									<a
+										href="https://www.builtinafrica.io/blog-post/retroly-remote-retrospective-tool"
+										target="_blank"
+										rel="noopener"
+										><i
+											class="fa fa-external-link"
+											target="_blank"
+											rel="noopener"
+											aria-label="Certificate"
+										></i>
+										Check Out</a
+									>
+								</p>
+								<p></p>
+								<p>Overcoming Stereotypes as a Nigerian Developer.</p>
+								<p>
+									<a
+										href="https://www.builtinafrica.io/blog-post/overcoming-stereotypes-life-as-a-nigerian-developer"
+										target="_blank"
+										rel="noopener"
+										><i
+											class="fa fa-external-link"
+											target="_blank"
+											rel="noopener"
+											aria-label="Certificate"
+										></i>
+										Check Out</a
+									>
+								</p>
+								<p></p>
+							</div>
+						</aside>
+						<aside>
+							<figure>
+								<embed src="https://wakatime.com/share/@Mylo_Carson/f371772c-8789-483e-b0d6-1cf7858f94d8.svg" />
+							</figure>
+						</aside>
+						<aside>
+							<figure>
+								<embed src="https://wakatime.com/share/@Mylo_Carson/9f384c1b-1118-4d67-9d96-fe73a33b928c.svg" />
+							</figure>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
