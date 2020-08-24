@@ -30,18 +30,9 @@ h2 {
 	background: url('../images/bg.png') repeat;
 	background-size: 300px auto;
 	-webkit-text-fill-color: transparent;
-	text-fill-color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
 	animation: upward 12s infinite linear;
-}
-@keyframes upward {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: 0 -300px;
-	}
 }
 h5 {
 	font-size: 17px;
@@ -166,5 +157,14 @@ main {
 	}
 	100% {
 		color: #fff;
+	}
+}
+
+@keyframes upward {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 0 -300px;
 	}
 }
