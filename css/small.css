@@ -7,7 +7,7 @@ h2 {
 	text-align: center;
 }
 .header {
-	height: 60vh;
+	height: 50vh;
 	background: #000;
 	color: #fff;
 	position: absolute;
@@ -39,7 +39,7 @@ h2 {
 	font-size: 15px;
 }
 main {
-	margin-top: 60vh;
+	margin-top: 50vh;
 	overflow-x: hidden;
 }
 .works {
