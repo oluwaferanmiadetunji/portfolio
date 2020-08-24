@@ -13,7 +13,6 @@ h2 {
 	position: absolute;
 	top: 0;
 	left: 0;
-	overflow: hidden;
 }
 .name__container {
 	display: block;
@@ -28,7 +27,7 @@ h2 {
 }
 .social {
 	text-align: center;
-	margin: 20px 75px;
+	margin: 20px 5px;
 	padding-inline-start: 0;
 }
 .social li {
