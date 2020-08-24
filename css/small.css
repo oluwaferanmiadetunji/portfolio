@@ -22,6 +22,10 @@ h2 {
 	text-align: center;
 	margin-left: 0;
 }
+.profile-image img {
+	height: 100px;
+	width: 100px;
+}
 .profile-details {
 	margin: 25px 0;
 }
