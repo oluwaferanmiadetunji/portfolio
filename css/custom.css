@@ -1,0 +1,9 @@
+/* your styles go here */
+.project__description {
+	margin-bottom: 20px;
+}
+
+.img-fluid.rounded-circle {
+	width: 50%;
+	height: 50%;
+}
